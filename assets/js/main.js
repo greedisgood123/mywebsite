@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initKeyboardNavigation();
     initLazyLoading();
     preloadCriticalResources();
+    initGallery();
+    addScreenReaderStyles();
 });
 
 /**
@@ -637,6 +639,194 @@ window.addEventListener('error', function(event) {
     // In production, send to error tracking service
     // reportError(event.error, event.filename, event.lineno);
 });
+
+/**
+ * Gallery Functionality
+ * Lightbox modal for image gallery
+ */
+function initGallery() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxCounter = document.querySelector('.lightbox-counter');
+    const currentImageSpan = document.getElementById('current-image');
+    const totalImagesSpan = document.getElementById('total-images');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const prevBtn = document.querySelector('.lightbox-prev');
+    const nextBtn = document.querySelector('.lightbox-next');
+
+    let currentImageIndex = 0;
+    const galleryImages = Array.from(galleryItems).map(item => ({
+        src: item.querySelector('img').src,
+        alt: item.querySelector('img').alt,
+        caption: item.querySelector('img').dataset.caption
+    }));
+
+    // Open lightbox when clicking gallery item
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => openLightbox(index));
+        item.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openLightbox(index);
+            }
+        });
+    });
+
+    // Close lightbox
+    closeBtn.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && lightbox.classList.contains('show')) {
+            closeLightbox();
+        }
+    });
+
+    // Click overlay to close
+    lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox || event.target.classList.contains('lightbox-overlay')) {
+            closeLightbox();
+        }
+    });
+
+    // Navigation
+    prevBtn.addEventListener('click', showPreviousImage);
+    nextBtn.addEventListener('click', showNextImage);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (event) => {
+        if (!lightbox.classList.contains('show')) return;
+
+        if (event.key === 'ArrowLeft') {
+            event.preventDefault();
+            showPreviousImage();
+        } else if (event.key === 'ArrowRight') {
+            event.preventDefault();
+            showNextImage();
+        }
+    });
+
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    lightbox.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].screenX;
+    });
+
+    lightbox.addEventListener('touchend', (event) => {
+        touchEndX = event.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const swipeDistance = touchStartX - touchEndX;
+
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+            if (swipeDistance > 0) {
+                showNextImage(); // Swipe left
+            } else {
+                showPreviousImage(); // Swipe right
+            }
+        }
+    }
+
+    function openLightbox(index) {
+        currentImageIndex = index;
+        updateLightboxImage();
+        lightbox.classList.add('show');
+
+        // Focus management
+        lightbox.setAttribute('aria-hidden', 'false');
+        lightboxImage.focus();
+
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+
+        // Announce to screen readers
+        announceImageChange();
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('show');
+        lightbox.setAttribute('aria-hidden', 'true');
+
+        // Return focus to the gallery item that was clicked
+        galleryItems[currentImageIndex].focus();
+
+        // Restore body scroll
+        document.body.style.overflow = '';
+    }
+
+    function showPreviousImage() {
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateLightboxImage();
+        announceImageChange();
+    }
+
+    function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+        updateLightboxImage();
+        announceImageChange();
+    }
+
+    function updateLightboxImage() {
+        const image = galleryImages[currentImageIndex];
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightboxCaption.textContent = image.caption;
+        currentImageSpan.textContent = currentImageIndex + 1;
+        totalImagesSpan.textContent = galleryImages.length;
+
+        // Update accessibility attributes
+        lightbox.setAttribute('aria-label', `Image ${currentImageIndex + 1} of ${galleryImages.length}: ${image.caption}`);
+    }
+
+    function announceImageChange() {
+        // Create a live region for screen reader announcements
+        const announcement = document.createElement('div');
+        announcement.setAttribute('aria-live', 'polite');
+        announcement.setAttribute('aria-atomic', 'true');
+        announcement.className = 'sr-only';
+        announcement.textContent = `Image ${currentImageIndex + 1} of ${galleryImages.length}: ${galleryImages[currentImageIndex].caption}`;
+
+        document.body.appendChild(announcement);
+
+        // Remove after announcement
+        setTimeout(() => {
+            document.body.removeChild(announcement);
+        }, 1000);
+    }
+
+    // Update total images count on load
+    totalImagesSpan.textContent = galleryImages.length;
+}
+
+/**
+ * Screen Reader Only Utility Class
+ * Add to CSS for accessibility
+ */
+function addScreenReaderStyles() {
+    if (!document.querySelector('#sr-styles')) {
+        const style = document.createElement('style');
+        style.id = 'sr-styles';
+        style.textContent = `
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+}
 
 /**
  * Unhandled Promise Rejection Handler

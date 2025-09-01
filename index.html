@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+ 
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -56,6 +58,9 @@
                     </li>
                     <li role="none">
                         <a href="#portfolio" role="menuitem" class="nav-link">Portfolio</a>
+                    </li>
+                    <li role="none">
+                        <a href="#gallery" role="menuitem" class="nav-link">Gallery</a>
                     </li>
                     <li role="none">
                         <a href="#contact" role="menuitem" class="nav-link">Contact</a>
@@ -307,7 +312,113 @@
                 </div>
             </div>
         </section>
+
+        <!-- Image Gallery Section -->
+        <section class="gallery" id="gallery" aria-labelledby="gallery-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="gallery-heading">Corporate Gallery</h2>
+                    <p class="section-description">
+                        Professional photography showcasing our work and expertise
+                    </p>
+                </div>
+
+                <div class="gallery-grid" role="list" aria-label="Image gallery">
+                    <div class="gallery-item" role="listitem">
+                        <img src="assets/images/Corporate Photoshoot/0FK_0517_4185.jpg"
+                             alt="Professional corporate headshot - Business portrait"
+                             loading="lazy"
+                             tabindex="0"
+                             data-caption="Corporate Business Portrait">
+                    </div>
+                    <div class="gallery-item" role="listitem">
+                        <img src="assets/images/Corporate Photoshoot/0FK_0582.jpg"
+                             alt="Executive team meeting - Professional business environment"
+                             loading="lazy"
+                             tabindex="0"
+                             data-caption="Executive Team Meeting">
+                    </div>
+                    <div class="gallery-item" role="listitem">
+                        <img src="assets/images/Corporate Photoshoot/0FK_0658.jpg"
+                             alt="Corporate office workspace - Modern business environment"
+                             loading="lazy"
+                             tabindex="0"
+                             data-caption="Modern Office Workspace">
+                    </div>
+                    <div class="gallery-item" role="listitem">
+                        <img src="assets/images/Corporate Photoshoot/0FK_0662.jpg"
+                             alt="Business conference setup - Professional presentation space"
+                             loading="lazy"
+                             tabindex="0"
+                             data-caption="Business Conference Setup">
+                    </div>
+                    <div class="gallery-item" role="listitem">
+                        <img src="assets/images/Corporate Photoshoot/20191208-LAN_0281-2-scaled.jpg"
+                             alt="Corporate event photography - Professional networking"
+                             loading="lazy"
+                             tabindex="0"
+                             data-caption="Corporate Networking Event">
+                    </div>
+                    <div class="gallery-item" role="listitem">
+                        <img src="assets/images/Corporate Photoshoot/Abu Zaid Studio-09698.jpg"
+                             alt="Professional studio portrait - Corporate headshot"
+                             loading="lazy"
+                             tabindex="0"
+                             data-caption="Studio Corporate Portrait">
+                    </div>
+                    <div class="gallery-item" role="listitem">
+                        <img src="assets/images/Corporate Photoshoot/Amin Rashidi Studio-675.jpg"
+                             alt="Creative corporate photography - Artistic business portrait"
+                             loading="lazy"
+                             tabindex="0"
+                             data-caption="Creative Corporate Photography">
+                    </div>
+                    <div class="gallery-item" role="listitem">
+                        <img src="assets/images/Corporate Photoshoot/hero-headshot.jpg"
+                             alt="Hero headshot - Professional executive portrait"
+                             loading="lazy"
+                             tabindex="0"
+                             data-caption="Executive Headshot">
+                    </div>
+                    <div class="gallery-item" role="listitem">
+                        <img src="assets/images/Corporate Photoshoot/photo_2025-08-14 14.47.22.jpeg"
+                             alt="Corporate lifestyle photography - Modern business casual"
+                             loading="lazy"
+                             tabindex="0"
+                             data-caption="Corporate Lifestyle Photography">
+                    </div>
+                    <div class="gallery-item" role="listitem">
+                        <img src="assets/images/wedding-full-recording-card.jpg"
+                             alt="Event photography - Professional recording setup"
+                             loading="lazy"
+                             tabindex="0"
+                             data-caption="Professional Event Recording">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-labelledby="lightbox-caption" aria-modal="true">
+        <div class="lightbox-overlay" aria-hidden="true"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Close gallery" tabindex="0">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <button class="lightbox-prev" aria-label="Previous image" tabindex="0">
+                <span aria-hidden="true">&#8249;</span>
+            </button>
+            <button class="lightbox-next" aria-label="Next image" tabindex="0">
+                <span aria-hidden="true">&#8250;</span>
+            </button>
+            <img id="lightbox-image" src="" alt="" tabindex="0">
+            <div class="lightbox-info">
+                <p id="lightbox-caption" class="lightbox-caption"></p>
+                <p class="lightbox-counter"><span id="current-image">1</span> / <span id="total-images">10</span></p>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer role="contentinfo">
