@@ -836,7 +836,7 @@ footer {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-2xl);
     align-items: start;
@@ -876,6 +876,17 @@ footer {
 }
 
 /* Mosaic layout variations for different screen sizes */
+@media (min-width: 640px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Simple mosaic for small tablets */
+    .gallery-item:nth-child(4n+1) {
+        grid-row: span 2;
+    }
+}
+
 @media (min-width: 768px) {
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -902,6 +913,25 @@ footer {
 
     /* More complex mosaic pattern for larger screens */
     .gallery-item:nth-child(5n+1) {
+        grid-row: span 2;
+    }
+
+    .gallery-item:nth-child(7n+3) {
+        grid-row: span 1;
+    }
+
+    .gallery-item:nth-child(11n+5) {
+        grid-row: span 2;
+    }
+}
+
+@media (min-width: 1280px) {
+    .gallery-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    /* Complex mosaic for very large screens */
+    .gallery-item:nth-child(6n+1) {
         grid-row: span 2;
     }
 
@@ -1045,24 +1075,15 @@ footer {
 }
 
 /* Responsive Gallery - Mosaic Layout */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-md);
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: var(--spacing-sm);
     }
 
-    /* Reset mosaic spans for tablets */
-    .gallery-item:nth-child(3n+1),
-    .gallery-item:nth-child(5n+2),
-    .gallery-item:nth-child(7n+3),
-    .gallery-item:nth-child(5n+1),
-    .gallery-item:nth-child(11n+5) {
+    /* Reset all mosaic spans for mobile */
+    .gallery-item:nth-child(n) {
         grid-row: span 1;
-    }
-
-    /* Create simple mosaic pattern for tablets */
-    .gallery-item:nth-child(4n+1) {
-        grid-row: span 2;
     }
 
     .lightbox-content img {
@@ -1093,8 +1114,7 @@ footer {
     }
 
     /* Single column on mobile - no mosaic spans */
-    .gallery-item:nth-child(4n+1),
-    .gallery-item:nth-child(3n+1) {
+    .gallery-item:nth-child(n) {
         grid-row: span 1;
     }
 
@@ -1133,11 +1153,19 @@ footer {
 }
 
 /* Special handling for very tall or wide images */
-@media (min-width: 769px) {
+@media (min-width: 641px) {
     .gallery-item img {
         /* Limit extreme aspect ratios for better mosaic layout */
+        max-height: 350px;
+        min-height: 150px;
+    }
+}
+
+@media (min-width: 1281px) {
+    .gallery-item img {
+        /* Allow larger images on very wide screens */
         max-height: 400px;
-        min-height: 200px;
+        min-height: 180px;
     }
 }
 
