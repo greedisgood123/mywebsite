@@ -836,9 +836,10 @@ footer {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-2xl);
+    align-items: start;
 }
 
 .gallery-item {
@@ -849,6 +850,8 @@ footer {
     cursor: pointer;
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     background-color: var(--bg-secondary);
+    /* Let items size themselves based on content */
+    display: block;
 }
 
 .gallery-item:hover,
@@ -861,15 +864,54 @@ footer {
 
 .gallery-item img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: auto; /* Let images size naturally */
+    object-fit: contain; /* No cropping, show full image */
     display: block;
     transition: transform var(--transition-normal);
 }
 
 .gallery-item:hover img,
 .gallery-item:focus img {
-    transform: scale(1.05);
+    transform: scale(1.02); /* Subtle zoom on hover */
+}
+
+/* Mosaic layout variations for different screen sizes */
+@media (min-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Create mosaic effect with different item spans */
+    .gallery-item:nth-child(3n+1) {
+        grid-row: span 2;
+    }
+
+    .gallery-item:nth-child(5n+2) {
+        grid-row: span 1;
+    }
+
+    .gallery-item:nth-child(7n+3) {
+        grid-row: span 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* More complex mosaic pattern for larger screens */
+    .gallery-item:nth-child(5n+1) {
+        grid-row: span 2;
+    }
+
+    .gallery-item:nth-child(7n+3) {
+        grid-row: span 1;
+    }
+
+    .gallery-item:nth-child(11n+5) {
+        grid-row: span 2;
+    }
 }
 
 /* Lightbox Styles */
@@ -1002,15 +1044,25 @@ footer {
     }
 }
 
-/* Responsive Gallery */
+/* Responsive Gallery - Mosaic Layout */
 @media (max-width: 768px) {
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-md);
     }
 
-    .gallery-item img {
-        height: 200px;
+    /* Reset mosaic spans for tablets */
+    .gallery-item:nth-child(3n+1),
+    .gallery-item:nth-child(5n+2),
+    .gallery-item:nth-child(7n+3),
+    .gallery-item:nth-child(5n+1),
+    .gallery-item:nth-child(11n+5) {
+        grid-row: span 1;
+    }
+
+    /* Create simple mosaic pattern for tablets */
+    .gallery-item:nth-child(4n+1) {
+        grid-row: span 2;
     }
 
     .lightbox-content img {
@@ -1037,10 +1089,19 @@ footer {
 @media (max-width: 480px) {
     .gallery-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
     }
 
+    /* Single column on mobile - no mosaic spans */
+    .gallery-item:nth-child(4n+1),
+    .gallery-item:nth-child(3n+1) {
+        grid-row: span 1;
+    }
+
+    /* Add some height limits for very small images */
     .gallery-item img {
-        height: 180px;
+        max-height: 300px;
+        min-height: 150px;
     }
 
     .lightbox-prev,
@@ -1058,6 +1119,25 @@ footer {
 
     .lightbox-caption {
         font-size: var(--font-size-base);
+    }
+}
+
+/* Ensure proper aspect ratio handling */
+.gallery-item img {
+    /* Let images maintain their natural proportions */
+    aspect-ratio: auto;
+    /* Ensure images don't overflow their containers */
+    max-width: 100%;
+    /* Add subtle background for transparent images */
+    background-color: var(--bg-color);
+}
+
+/* Special handling for very tall or wide images */
+@media (min-width: 769px) {
+    .gallery-item img {
+        /* Limit extreme aspect ratios for better mosaic layout */
+        max-height: 400px;
+        min-height: 200px;
     }
 }
 
