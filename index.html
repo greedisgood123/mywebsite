@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn modern web development with best practices - A beginner-friendly tutorial website">
+    <meta name="keywords" content="web development, HTML, CSS, JavaScript, best practices, tutorial">
+    <meta name="author" content="Your Name">
+
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Modern Web Development | Best Practices Tutorial</title>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header with navigation -->
+    <header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#" aria-label="Home">
+                        <span class="logo-text">WebDev</span>
+                        <span class="logo-accent">Pro</span>
+                    </a>
+                </div>
+
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+                <ul class="nav-menu" role="menubar">
+                    <li role="none">
+                        <a href="#home" role="menuitem" class="nav-link active" aria-current="page">Home</a>
+                    </li>
+                    <li role="none">
+                        <a href="#about" role="menuitem" class="nav-link">About</a>
+                    </li>
+                    <li role="none">
+                        <a href="#services" role="menuitem" class="nav-link">Services</a>
+                    </li>
+                    <li role="none">
+                        <a href="#portfolio" role="menuitem" class="nav-link">Portfolio</a>
+                    </li>
+                    <li role="none">
+                        <a href="#contact" role="menuitem" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero" id="home" aria-labelledby="hero-heading">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 id="hero-heading" class="hero-title">
+                        Master Modern Web Development
+                        <span class="hero-accent">Best Practices</span>
+                    </h1>
+                    <p class="hero-description">
+                        Learn to build professional, accessible, and performant websites
+                        using industry-standard techniques and modern tools.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#about" class="btn btn-primary">Get Started</a>
+                        <a href="#portfolio" class="btn btn-secondary">View Projects</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-preview">
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;Modern Web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="about-heading">Why Learn Modern Web Development?</h2>
+                    <p class="section-description">
+                        Understanding best practices ensures your websites are fast, accessible,
+                        and maintainable in the professional world.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🚀</div>
+                        <h3>Performance First</h3>
+                        <p>Learn techniques to make your websites load fast and run smoothly
+                        on all devices and network conditions.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">♿</div>
+                        <h3>Accessibility</h3>
+                        <p>Build inclusive websites that work for everyone, including people
+                        with disabilities and using assistive technologies.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📱</div>
+                        <h3>Responsive Design</h3>
+                        <p>Create websites that look great and work perfectly on desktop,
+                        tablet, and mobile devices.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🛠️</div>
+                        <h3>Best Practices</h3>
+                        <p>Follow industry standards and modern development workflows
+                        used by professional developers worldwide.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services" aria-labelledby="services-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="services-heading">What You'll Learn</h2>
+                    <p class="section-description">
+                        A comprehensive curriculum covering all aspects of modern web development
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3>Semantic HTML5</h3>
+                        <p>Proper document structure with semantic elements for better SEO and accessibility</p>
+                        <ul class="service-features">
+                            <li>Header, nav, main, section, article</li>
+                            <li>Proper heading hierarchy</li>
+                            <li>ARIA landmarks and labels</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Modern CSS</h3>
+                        <p>CSS best practices including variables, flexbox, grid, and responsive design</p>
+                        <ul class="service-features">
+                            <li>CSS custom properties</li>
+                            <li>Mobile-first approach</li>
+                            <li>Modern layout techniques</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-item">
+                        <h3>Vanilla JavaScript</h3>
+                        <p>Modern JavaScript with ES6+ features and best practices</p>
+                        <ul class="service-features">
+                            <li>DOM manipulation</li>
+                            <li>Event handling</li>
+                            <li>Error handling and debugging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio" id="portfolio" aria-labelledby="portfolio-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="portfolio-heading">Project Examples</h2>
+                    <p class="section-description">
+                        See how these techniques come together in real projects
+                    </p>
+                </div>
+
+                <div class="portfolio-grid">
+                    <article class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="assets/images/project1.jpg"
+                                 alt="Responsive landing page project showcasing mobile-first design with smooth animations and optimal performance"
+                                 loading="lazy"
+                                 width="400"
+                                 height="200">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Responsive Landing Page</h3>
+                            <p>Mobile-first design with smooth animations and optimal performance</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="assets/images/project2.jpg"
+                                 alt="Interactive dashboard project featuring data visualization with accessible charts and full keyboard navigation support"
+                                 loading="lazy"
+                                 width="400"
+                                 height="200">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Interactive Dashboard</h3>
+                            <p>Data visualization with accessible charts and keyboard navigation</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Accessibility</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Performance</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="assets/images/project3.jpg"
+                                 alt="E-commerce site project demonstrating user-friendly shopping experience with comprehensive form validation"
+                                 loading="lazy"
+                                 width="400"
+                                 height="200">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>E-commerce Interface</h3>
+                            <p>User-friendly shopping experience with proper form validation</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Forms</span>
+                                <span class="tag">Validation</span>
+                                <span class="tag">UX</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="contact-heading">Get Started Today</h2>
+                    <p class="section-description">
+                        Ready to begin your journey into modern web development?
+                    </p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Next Steps</h3>
+                        <ol class="next-steps">
+                            <li>Review the HTML structure in this file</li>
+                            <li>Check out the CSS best practices in the stylesheets</li>
+                            <li>Explore the JavaScript interactions</li>
+                            <li>Start building your own projects</li>
+                        </ol>
+
+                        <div class="contact-links">
+                            <a href="https://developer.mozilla.org" class="external-link" target="_blank" rel="noopener">
+                                MDN Web Docs
+                            </a>
+                            <a href="https://web.dev" class="external-link" target="_blank" rel="noopener">
+                                Google Web.dev
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" action="#" method="post" aria-labelledby="form-heading">
+                        <h3 id="form-heading">Stay Updated</h3>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required aria-describedby="name-help">
+                            <span id="name-help" class="help-text">Enter your full name</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required aria-describedby="email-help">
+                            <span id="email-help" class="help-text">We'll send you web development tips</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>WebDev Pro</h4>
+                    <p>Learn modern web development with industry best practices</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <nav aria-label="Footer navigation">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener">HTML5 Spec</a></li>
+                        <li><a href="https://www.w3.org/TR/CSS/" target="_blank" rel="noopener">CSS Spec</a></li>
+                        <li><a href="https://tc39.es/ecma262/" target="_blank" rel="noopener">JavaScript Spec</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 WebDev Pro. Built with modern web standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
