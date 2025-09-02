@@ -5,9 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn modern web development with best practices - A beginner-friendly tutorial website">
-    <meta name="keywords" content="web development, HTML, CSS, JavaScript, best practices, tutorial">
-    <meta name="author" content="Your Name">
+    <meta name="description" content="Professional headshot photography with zero hassle. Corporate headshots, executive portraits, and business photography services.">
+    <meta name="keywords" content="headshots, professional photography, corporate portraits, executive photography, business headshots">
+    <meta name="author" content="Professional Headshots Studio">
 
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Modern Web Development | Best Practices Tutorial</title>
+    <title>Professional Headshots | Zero Hassle Corporate Photography</title>
 </head>
 <body>
     <!-- Skip to main content link for accessibility -->
@@ -35,8 +35,8 @@
             <div class="nav-container">
                 <div class="logo">
                     <a href="#" aria-label="Home">
-                        <span class="logo-text">WebDev</span>
-                        <span class="logo-accent">Pro</span>
+                        <span class="logo-text">Professional</span>
+                        <span class="logo-accent">Headshots</span>
                     </a>
                 </div>
 
@@ -48,24 +48,17 @@
 
                 <ul class="nav-menu" role="menubar">
                     <li role="none">
-                        <a href="#home" role="menuitem" class="nav-link active" aria-current="page">Home</a>
-                    </li>
-                    <li role="none">
-                        <a href="#about" role="menuitem" class="nav-link">About</a>
-                    </li>
-                    <li role="none">
-                        <a href="#services" role="menuitem" class="nav-link">Services</a>
-                    </li>
-                    <li role="none">
                         <a href="#portfolio" role="menuitem" class="nav-link">Portfolio</a>
                     </li>
                     <li role="none">
-                        <a href="#gallery" role="menuitem" class="nav-link">Gallery</a>
+                        <a href="#reviews" role="menuitem" class="nav-link">Reviews</a>
                     </li>
                     <li role="none">
                         <a href="#contact" role="menuitem" class="nav-link">Contact</a>
                     </li>
                 </ul>
+
+                <a href="#packages" class="btn btn-primary nav-cta">Book Now</a>
             </div>
         </nav>
     </header>
@@ -74,191 +67,304 @@
     <main id="main-content" role="main">
         <!-- Hero Section -->
         <section class="hero" id="home" aria-labelledby="hero-heading">
+            <div class="hero-background">
+                <img src="assets/images/Corporate Photoshoot/hero-headshot.jpg" alt="Professional headshot background" class="hero-bg-image">
+                <div class="hero-overlay"></div>
+            </div>
             <div class="hero-container">
                 <div class="hero-content">
                     <h1 id="hero-heading" class="hero-title">
-                        Master Modern Web Development
-                        <span class="hero-accent">Best Practices</span>
+                        Professional Headshots
+                        <span class="hero-accent">Zero Hassle</span>
                     </h1>
                     <p class="hero-description">
-                        Learn to build professional, accessible, and performant websites
-                        using industry-standard techniques and modern tools.
+                        Get stunning professional headshots that make you stand out. 
+                        Quick turnaround, premium quality, hassle-free experience.
                     </p>
                     <div class="hero-actions">
-                        <a href="#about" class="btn btn-primary">Get Started</a>
-                        <a href="#portfolio" class="btn btn-secondary">View Projects</a>
+                        <a href="#packages" class="btn btn-primary">View Packages</a>
+                        <a href="#process" class="btn btn-secondary">See Our Process</a>
                     </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="code-preview">
-                        <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;title&gt;Modern Web&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Hello World!&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">48h</span>
+                            <span class="stat-label">Delivery</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Satisfaction</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="about" id="about" aria-labelledby="about-heading">
+        <!-- Featured Work Section -->
+        <section class="featured-work" id="portfolio" aria-labelledby="featured-work-heading">
             <div class="container">
                 <div class="section-header">
-                    <h2 id="about-heading">Why Learn Modern Web Development?</h2>
+                    <h2 id="featured-work-heading">Featured Work</h2>
                     <p class="section-description">
-                        Understanding best practices ensures your websites are fast, accessible,
-                        and maintainable in the professional world.
-                    </p>
-                </div>
-
-                <div class="features-grid">
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">🚀</div>
-                        <h3>Performance First</h3>
-                        <p>Learn techniques to make your websites load fast and run smoothly
-                        on all devices and network conditions.</p>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">♿</div>
-                        <h3>Accessibility</h3>
-                        <p>Build inclusive websites that work for everyone, including people
-                        with disabilities and using assistive technologies.</p>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">📱</div>
-                        <h3>Responsive Design</h3>
-                        <p>Create websites that look great and work perfectly on desktop,
-                        tablet, and mobile devices.</p>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">🛠️</div>
-                        <h3>Best Practices</h3>
-                        <p>Follow industry standards and modern development workflows
-                        used by professional developers worldwide.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="services" id="services" aria-labelledby="services-heading">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="services-heading">What You'll Learn</h2>
-                    <p class="section-description">
-                        A comprehensive curriculum covering all aspects of modern web development
-                    </p>
-                </div>
-
-                <div class="services-grid">
-                    <div class="service-item">
-                        <h3>Semantic HTML5</h3>
-                        <p>Proper document structure with semantic elements for better SEO and accessibility</p>
-                        <ul class="service-features">
-                            <li>Header, nav, main, section, article</li>
-                            <li>Proper heading hierarchy</li>
-                            <li>ARIA landmarks and labels</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-item">
-                        <h3>Modern CSS</h3>
-                        <p>CSS best practices including variables, flexbox, grid, and responsive design</p>
-                        <ul class="service-features">
-                            <li>CSS custom properties</li>
-                            <li>Mobile-first approach</li>
-                            <li>Modern layout techniques</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-item">
-                        <h3>Vanilla JavaScript</h3>
-                        <p>Modern JavaScript with ES6+ features and best practices</p>
-                        <ul class="service-features">
-                            <li>DOM manipulation</li>
-                            <li>Event handling</li>
-                            <li>Error handling and debugging</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section class="portfolio" id="portfolio" aria-labelledby="portfolio-heading">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="portfolio-heading">Project Examples</h2>
-                    <p class="section-description">
-                        See how these techniques come together in real projects
+                        Professional headshots that capture your best self
                     </p>
                 </div>
 
                 <div class="portfolio-grid">
-                    <article class="portfolio-item">
+                    <div class="portfolio-item">
                         <div class="portfolio-image">
-                            <img src="assets/images/project1.jpg"
-                                 alt="Responsive landing page project showcasing mobile-first design with smooth animations and optimal performance"
-                                 loading="lazy"
-                                 width="400"
-                                 height="200">
-                        </div>
-                        <div class="portfolio-content">
-                            <h3>Responsive Landing Page</h3>
-                            <p>Mobile-first design with smooth animations and optimal performance</p>
-                            <div class="portfolio-tags">
-                                <span class="tag">HTML5</span>
-                                <span class="tag">CSS3</span>
-                                <span class="tag">JavaScript</span>
+                            <img src="assets/images/Corporate Photoshoot/0FK_0517_4185.jpg" alt="Professional executive headshot">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category">Executive Portrait</span>
                             </div>
                         </div>
-                    </article>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="assets/images/Corporate Photoshoot/0FK_0582.jpg" alt="Corporate headshot">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category">Corporate Headshot</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="assets/images/Corporate Photoshoot/0FK_0658.jpg" alt="Professional business portrait">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category">Business Portrait</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="assets/images/Corporate Photoshoot/0FK_0662.jpg" alt="Professional studio headshot">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category">Studio Portrait</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="assets/images/Corporate Photoshoot/Abu Zaid Studio-09698.jpg" alt="Creative headshot">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category">Creative Portrait</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="assets/images/Corporate Photoshoot/Amin Rashidi Studio-675.jpg" alt="Professional portrait">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category">Professional Portrait</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <article class="portfolio-item">
-                        <div class="portfolio-image">
-                            <img src="assets/images/project2.jpg"
-                                 alt="Interactive dashboard project featuring data visualization with accessible charts and full keyboard navigation support"
-                                 loading="lazy"
-                                 width="400"
-                                 height="200">
-                        </div>
-                        <div class="portfolio-content">
-                            <h3>Interactive Dashboard</h3>
-                            <p>Data visualization with accessible charts and keyboard navigation</p>
-                            <div class="portfolio-tags">
-                                <span class="tag">Accessibility</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">Performance</span>
-                            </div>
-                        </div>
-                    </article>
+                <div class="section-cta">
+                    <a href="#contact" class="btn btn-secondary">View Full Portfolio</a>
+                </div>
+            </div>
+        </section>
 
-                    <article class="portfolio-item">
-                        <div class="portfolio-image">
-                            <img src="assets/images/project3.jpg"
-                                 alt="E-commerce site project demonstrating user-friendly shopping experience with comprehensive form validation"
-                                 loading="lazy"
-                                 width="400"
-                                 height="200">
+        <!-- Package Pricing Section -->
+        <section class="packages" id="packages" aria-labelledby="packages-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="packages-heading">Choose Your Package</h2>
+                    <p class="section-description">
+                        Professional headshot packages designed for your needs
+                    </p>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3 class="package-name">Essential</h3>
+                        <div class="package-price">$299</div>
+                        <ul class="package-features">
+                            <li>1 hour studio session</li>
+                            <li>3 outfit changes</li>
+                            <li>15 edited images</li>
+                            <li>High-resolution digital files</li>
+                            <li>48-hour delivery</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Book Now</a>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3 class="package-name">Professional</h3>
+                        <div class="package-price">$499</div>
+                        <ul class="package-features">
+                            <li>1.5 hour studio session</li>
+                            <li>5 outfit changes</li>
+                            <li>25 edited images</li>
+                            <li>High-resolution digital files</li>
+                            <li>Professional retouching</li>
+                            <li>24-hour delivery</li>
+                            <li>Print release included</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Book Now</a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <h3 class="package-name">Executive</h3>
+                        <div class="package-price">$799</div>
+                        <ul class="package-features">
+                            <li>2 hour premium session</li>
+                            <li>Unlimited outfit changes</li>
+                            <li>50 edited images</li>
+                            <li>High-resolution digital files</li>
+                            <li>Premium retouching</li>
+                            <li>Same-day delivery</li>
+                            <li>Print release included</li>
+                            <li>Personal styling consultation</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add-Ons Section -->
+        <section class="addons" aria-labelledby="addons-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="addons-heading">Add-On Services</h2>
+                </div>
+
+                <div class="addons-list">
+                    <div class="addon-item">
+                        <span class="addon-name">Professional Hair & Makeup</span>
+                        <span class="addon-price">$150</span>
+                    </div>
+                    <div class="addon-item">
+                        <span class="addon-name">Additional Outfit Change</span>
+                        <span class="addon-price">$50</span>
+                    </div>
+                    <div class="addon-item">
+                        <span class="addon-name">Rush Delivery (6 hours)</span>
+                        <span class="addon-price">$100</span>
+                    </div>
+                    <div class="addon-item">
+                        <span class="addon-name">Additional Retouched Images (5 pack)</span>
+                        <span class="addon-price">$75</span>
+                    </div>
+                    <div class="addon-item">
+                        <span class="addon-name">On-Location Session</span>
+                        <span class="addon-price">$200</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Testimonials Section -->
+        <section class="testimonials" id="reviews" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="testimonials-heading">What Our Clients Say</h2>
+                    <p class="section-description">
+                        Trusted by executives and professionals across industries
+                    </p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
                         </div>
-                        <div class="portfolio-content">
-                            <h3>E-commerce Interface</h3>
-                            <p>User-friendly shopping experience with proper form validation</p>
-                            <div class="portfolio-tags">
-                                <span class="tag">Forms</span>
-                                <span class="tag">Validation</span>
-                                <span class="tag">UX</span>
+                        <p class="testimonial-text">
+                            "Absolutely outstanding service! The headshots exceeded my expectations and really helped elevate my professional brand."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/Corporate Photoshoot/20191208-LAN_0281-2-scaled.jpg" alt="Client testimonial" class="author-photo">
+                            <div class="author-info">
+                                <div class="author-name">Sarah Johnson</div>
+                                <div class="author-title">CEO, Tech Innovations</div>
                             </div>
                         </div>
-                    </article>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Professional, efficient, and the results speak for themselves. My headshots have gotten so many compliments!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/Corporate Photoshoot/0FK_0517_4185.jpg" alt="Client testimonial" class="author-photo">
+                            <div class="author-info">
+                                <div class="author-name">Michael Chen</div>
+                                <div class="author-title">Senior Partner, Law Firm</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "The team made me feel comfortable and confident. The quick turnaround was exactly what I needed for my LinkedIn profile."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/Corporate Photoshoot/0FK_0582.jpg" alt="Client testimonial" class="author-photo">
+                            <div class="author-info">
+                                <div class="author-name">Emily Rodriguez</div>
+                                <div class="author-title">Marketing Director, Fortune 500</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "From booking to delivery, everything was seamless. These headshots have elevated my entire professional presence."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/Corporate Photoshoot/0FK_0658.jpg" alt="Client testimonial" class="author-photo">
+                            <div class="author-info">
+                                <div class="author-name">David Thompson</div>
+                                <div class="author-title">Executive VP, Financial Services</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Indicators Section -->
+        <section class="trust-indicators" aria-labelledby="trust-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="trust-heading">Trusted by Industry Leaders</h2>
+                </div>
+
+                <div class="client-logos">
+                    <div class="logo-item">Microsoft</div>
+                    <div class="logo-item">Goldman Sachs</div>
+                    <div class="logo-item">McKinsey & Co</div>
+                    <div class="logo-item">Deloitte</div>
+                    <div class="logo-item">Amazon</div>
+                    <div class="logo-item">JPMorgan Chase</div>
                 </div>
             </div>
         </section>
@@ -267,136 +373,78 @@
         <section class="contact" id="contact" aria-labelledby="contact-heading">
             <div class="container">
                 <div class="section-header">
-                    <h2 id="contact-heading">Get Started Today</h2>
+                    <h2 id="contact-heading">Ready to Transform Your Professional Image?</h2>
                     <p class="section-description">
-                        Ready to begin your journey into modern web development?
+                        Book your professional headshot session today and make a lasting impression
                     </p>
                 </div>
 
                 <div class="contact-content">
                     <div class="contact-info">
-                        <h3>Next Steps</h3>
-                        <ol class="next-steps">
-                            <li>Review the HTML structure in this file</li>
-                            <li>Check out the CSS best practices in the stylesheets</li>
-                            <li>Explore the JavaScript interactions</li>
-                            <li>Start building your own projects</li>
-                        </ol>
+                        <h3>Contact Information</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong>Phone:</strong> (555) 123-4567
+                            </div>
+                            <div class="contact-item">
+                                <strong>Email:</strong> info@professionalheadshots.com
+                            </div>
+                            <div class="contact-item">
+                                <strong>Studio Address:</strong> 123 Professional Plaza, Business District
+                            </div>
+                            <div class="contact-item">
+                                <strong>Service Area:</strong> Greater Metro Area & On-Location Sessions
+                            </div>
+                        </div>
 
-                        <div class="contact-links">
-                            <a href="https://developer.mozilla.org" class="external-link" target="_blank" rel="noopener">
-                                MDN Web Docs
-                            </a>
-                            <a href="https://web.dev" class="external-link" target="_blank" rel="noopener">
-                                Google Web.dev
-                            </a>
+                        <div class="business-hours">
+                            <h4>Business Hours</h4>
+                            <div class="hours-item">Monday - Friday: 9:00 AM - 7:00 PM</div>
+                            <div class="hours-item">Saturday: 10:00 AM - 5:00 PM</div>
+                            <div class="hours-item">Sunday: By Appointment Only</div>
                         </div>
                     </div>
 
                     <form class="contact-form" action="#" method="post" aria-labelledby="form-heading">
-                        <h3 id="form-heading">Stay Updated</h3>
+                        <h3 id="form-heading">Book Your Session</h3>
                         <div class="form-group">
-                            <label for="name">Name</label>
+                            <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required aria-describedby="name-help">
                             <span id="name-help" class="help-text">Enter your full name</span>
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email">Email Address</label>
                             <input type="email" id="email" name="email" required aria-describedby="email-help">
-                            <span id="email-help" class="help-text">We'll send you web development tips</span>
+                            <span id="email-help" class="help-text">We'll send you booking confirmation and details</span>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="package">Preferred Package</label>
+                            <select id="package" name="package" required>
+                                <option value="">Select a package</option>
+                                <option value="essential">Essential - $299</option>
+                                <option value="professional">Professional - $499</option>
+                                <option value="executive">Executive - $799</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Additional Details</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your needs, preferred dates, or any special requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Book Now</button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <!-- Image Gallery Section -->
-        <section class="gallery" id="gallery" aria-labelledby="gallery-heading">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="gallery-heading">Corporate Gallery</h2>
-                    <p class="section-description">
-                        Professional photography showcasing our work and expertise
-                    </p>
-                </div>
-
-                <div class="gallery-grid" role="list" aria-label="Image gallery">
-                    <div class="gallery-item" role="listitem">
-                        <img src="assets/images/Corporate Photoshoot/0FK_0517_4185.jpg"
-                             alt="Professional corporate headshot - Business portrait"
-                             loading="lazy"
-                             tabindex="0"
-                             data-caption="Corporate Business Portrait">
-                    </div>
-                    <div class="gallery-item" role="listitem">
-                        <img src="assets/images/Corporate Photoshoot/0FK_0582.jpg"
-                             alt="Executive team meeting - Professional business environment"
-                             loading="lazy"
-                             tabindex="0"
-                             data-caption="Executive Team Meeting">
-                    </div>
-                    <div class="gallery-item" role="listitem">
-                        <img src="assets/images/Corporate Photoshoot/0FK_0658.jpg"
-                             alt="Corporate office workspace - Modern business environment"
-                             loading="lazy"
-                             tabindex="0"
-                             data-caption="Modern Office Workspace">
-                    </div>
-                    <div class="gallery-item" role="listitem">
-                        <img src="assets/images/Corporate Photoshoot/0FK_0662.jpg"
-                             alt="Business conference setup - Professional presentation space"
-                             loading="lazy"
-                             tabindex="0"
-                             data-caption="Business Conference Setup">
-                    </div>
-                    <div class="gallery-item" role="listitem">
-                        <img src="assets/images/Corporate Photoshoot/20191208-LAN_0281-2-scaled.jpg"
-                             alt="Corporate event photography - Professional networking"
-                             loading="lazy"
-                             tabindex="0"
-                             data-caption="Corporate Networking Event">
-                    </div>
-                    <div class="gallery-item" role="listitem">
-                        <img src="assets/images/Corporate Photoshoot/Abu Zaid Studio-09698.jpg"
-                             alt="Professional studio portrait - Corporate headshot"
-                             loading="lazy"
-                             tabindex="0"
-                             data-caption="Studio Corporate Portrait">
-                    </div>
-                    <div class="gallery-item" role="listitem">
-                        <img src="assets/images/Corporate Photoshoot/Amin Rashidi Studio-675.jpg"
-                             alt="Creative corporate photography - Artistic business portrait"
-                             loading="lazy"
-                             tabindex="0"
-                             data-caption="Creative Corporate Photography">
-                    </div>
-                    <div class="gallery-item" role="listitem">
-                        <img src="assets/images/Corporate Photoshoot/hero-headshot.jpg"
-                             alt="Hero headshot - Professional executive portrait"
-                             loading="lazy"
-                             tabindex="0"
-                             data-caption="Executive Headshot">
-                    </div>
-                    <div class="gallery-item" role="listitem">
-                        <img src="assets/images/Corporate Photoshoot/photo_2025-08-14 14.47.22.jpeg"
-                             alt="Corporate lifestyle photography - Modern business casual"
-                             loading="lazy"
-                             tabindex="0"
-                             data-caption="Corporate Lifestyle Photography">
-                    </div>
-                    <div class="gallery-item" role="listitem">
-                        <img src="assets/images/wedding-full-recording-card.jpg"
-                             alt="Event photography - Professional recording setup"
-                             loading="lazy"
-                             tabindex="0"
-                             data-caption="Professional Event Recording">
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Lightbox Modal -->
@@ -420,39 +468,45 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer role="contentinfo">
+    <!-- Footer CTA Section -->
+    <footer role="contentinfo" class="footer-cta">
         <div class="footer-container">
+            <div class="footer-cta-content">
+                <h2>Ready to Transform Your Professional Presence?</h2>
+                <p>Join hundreds of professionals who have elevated their careers with our headshot services</p>
+                <a href="#packages" class="btn btn-primary">Book Your Session Now</a>
+            </div>
+            
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>WebDev Pro</h4>
-                    <p>Learn modern web development with industry best practices</p>
+                    <h4>Professional Headshots</h4>
+                    <p>Elevating professionals through exceptional photography</p>
                 </div>
 
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <nav aria-label="Footer navigation">
                         <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#packages">Packages</a></li>
+                            <li><a href="#reviews">Reviews</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
 
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h4>Contact Info</h4>
                     <ul>
-                        <li><a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener">HTML5 Spec</a></li>
-                        <li><a href="https://www.w3.org/TR/CSS/" target="_blank" rel="noopener">CSS Spec</a></li>
-                        <li><a href="https://tc39.es/ecma262/" target="_blank" rel="noopener">JavaScript Spec</a></li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Email: info@professionalheadshots.com</li>
+                        <li>Studio: 123 Professional Plaza</li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 WebDev Pro. Built with modern web standards.</p>
+                <p>&copy; 2024 Professional Headshots. Elevating careers through exceptional photography.</p>
             </div>
         </div>
     </footer>
